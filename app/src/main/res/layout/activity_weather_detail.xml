@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="shreyas.weatherapp.views.details.WeatherDetailActivity" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/detail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.details.WeatherDetailActivity">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        </android.support.v7.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/detail_weather_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:padding="@dimen/dimen_20dp"
+            android:text="@string/weather_detail_city_name_label" />
+
+        <TextView
+            android:id="@+id/detail_weather_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginStart="@dimen/dimen_20dp"
+            android:layout_toEndOf="@+id/detail_weather_label"
+            android:padding="@dimen/dimen_20dp" />
+
+        <TextView
+            android:id="@+id/detail_weather_temperature_c_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detail_weather_label"
+            android:padding="@dimen/dimen_20dp"
+            android:text="@string/weather_detail_city_temperature_c" />
+
+        <TextView
+            android:id="@+id/detail_weather_temperature_c_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detail_weather_value"
+            android:layout_marginStart="@dimen/dimen_20dp"
+            android:layout_toEndOf="@+id/detail_weather_temperature_c_label"
+            android:padding="@dimen/dimen_20dp" />
+
+        <TextView
+            android:id="@+id/detail_weather_temperature_f_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detail_weather_temperature_c_label"
+            android:padding="@dimen/dimen_20dp"
+            android:text="@string/weather_detail_city_temperature_f" />
+
+        <TextView
+            android:id="@+id/detail_weather_temperature_f_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detail_weather_temperature_c_value"
+            android:layout_marginStart="@dimen/dimen_20dp"
+            android:layout_toEndOf="@+id/detail_weather_temperature_f_label"
+            android:padding="@dimen/dimen_20dp" />
+
+    </RelativeLayout>
+</layout>

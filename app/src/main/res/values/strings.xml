@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+
+    <string name="zip_code_add_button">Add Zip</string>
+
+    <string name="error_results">Error: Service Call Failed</string>
+
+    <string name="weather_detail_city_name_label">City Name: </string>
+
+    <string name="weather_detail_city_temperature_c">Temperature(C): </string>
+
+    <string name="weather_detail_city_temperature_f">Temperature(F): </string>
+
+    <string name="placeholder_text">Enter zip code</string>
+
+</resources>

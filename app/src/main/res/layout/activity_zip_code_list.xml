@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="data"
+            type="shreyas.weatherapp.views.zipcode_list.ZipCodeListActivity"
+            />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/zipcode_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".views.zipcode_list.ZipCodeListActivity">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/zip_code_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/search_error_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progress_bar"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/error_results"/>
+
+        <EditText
+            android:id="@+id/zip_code_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/zip_code_list"
+            android:inputType="number"
+            android:maxLength="5"
+            android:cursorVisible="true"
+            android:focusable="true"
+            android:layout_margin="@dimen/dimen_20dp"
+            android:hint="@string/placeholder_text"/>
+
+        <Button
+            android:id="@+id/add_zip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/zip_code_edit"
+            android:layout_centerHorizontal="true"
+            android:text="@string/zip_code_add_button"/>
+    </RelativeLayout>
+</layout>

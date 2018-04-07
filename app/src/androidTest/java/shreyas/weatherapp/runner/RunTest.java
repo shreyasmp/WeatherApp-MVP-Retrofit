@@ -1,6 +1,6 @@
 package shreyas.weatherapp.runner;
 
-import android.support.test.espresso.Espresso;
+import android.support.test.espresso.IdlingRegistry;
 import android.support.test.espresso.intent.rule.IntentsTestRule;
 import android.support.test.filters.LargeTest;
 import android.support.test.filters.SmallTest;
@@ -14,8 +14,6 @@ import org.junit.runner.RunWith;
 
 import shreyas.weatherapp.espressorobot.Robot;
 import shreyas.weatherapp.views.zipcode_list.ZipCodeListActivity;
-
-import static android.support.test.espresso.Espresso.registerIdlingResources;
 
 /**
  * Created by shreyasmp on 4/3/18.
@@ -39,7 +37,7 @@ public class RunTest {
     // Register the idling resource before start of tests
     @Before
     public void registerResource() {
-        registerIdlingResources(searchZipCodeActivityTestRule.getActivity().getIdlingResource());
+        IdlingRegistry.getInstance().register(searchZipCodeActivityTestRule.getActivity().getIdlingResource());
     }
 
     @SmallTest
@@ -67,6 +65,6 @@ public class RunTest {
 
     @After
     public void unRegisterIdlingResource() {
-        Espresso.unregisterIdlingResources(searchZipCodeActivityTestRule.getActivity().getIdlingResource());
+        IdlingRegistry.getInstance().unregister(searchZipCodeActivityTestRule.getActivity().getIdlingResource());
     }
 }
